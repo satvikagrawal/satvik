@@ -1,0 +1,30 @@
+import java.util.*;
+public class countelements {
+    public static void main(String[] args) {
+        Scanner s = new Scanner (System.in);
+        int n = s.nextInt();
+        int []a = new int[n];
+        for(int i =0; i<n ; i++){
+            a[i]= s.nextInt();
+        }
+       System.out.print("counting is " + count (a,n));
+    }
+    
+
+    public static int count(int []a , int n){
+        int count = 0; boolean dist =true;
+        for(int i =0; i<n;i++){
+            for (int j = (i-1); j>=0;j--){
+                if(a[i]== a[j]){
+                    dist = false;
+                    break;
+                }
+            }
+            if(dist == true ){
+                count ++;
+            }
+           dist=true;
+        }
+        return count;
+    }
+}
