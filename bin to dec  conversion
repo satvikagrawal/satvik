@@ -1,0 +1,32 @@
+
+/* 
+decimal to binary
+import java.util.*;
+public class oddeven {
+    public static void main(String[] args) {
+        int n = 18;
+        String s = " ";
+        while(n>0){
+            s= (n%2)+s;
+            n=n/2;
+
+        }
+        System.out.print(s);
+    }
+}
+    */    
+
+/*binary to decimal */
+    import java.util.*;
+    public class oddeven {
+    public static void main(String[] args) {
+       String s= "10101";
+       int k=1; int m =0;
+       for(int i=s.length() -1 ; i>=0 ; i--){
+        m= m  + (s.charAt(i) - '0') * k;
+        k = k*2;
+       }
+       System.out.print(m);
+        
+    }
+}
